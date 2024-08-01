@@ -1,0 +1,13 @@
+Interprocess communication (IPC) Mechanisms
+
+IPC between processes within the same machine 
+  IPC through kernel memory
+    Pipes
+    FIFO
+    POSIX Message queue
+    Unix Domain socket
+  IPC through user memory
+    POSIX Shared Variable with POSIX Semphore
+
+IPC between processes running on the different machine 
+  Internet Domain Socket(TCP and UDP)

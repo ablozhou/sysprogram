@@ -1,0 +1,47 @@
+zhh@mysvr:~/sysprogram/osprj$ cc parking.c -o parking
+zhh@mysvr:~/sysprogram/osprj$ ./parking 3 1 1
+Welcome to the parking lot in Vancouver city, there are 1 entries and 1 exits, 3 spaces to parking.
+mysem_open successful, capacity is 3.
+Fork entry process 0
+Fork exit process 0
+Entry 0 opened.
+Vehicle 0 entering entrance 0, space left 3.
+Vehicle 0 entered.
+Exit 0 opened.
+Vehicle 1 left from 0 exit, space 3.
+Vehicle 1 entering entrance 0, space left 3.
+Vehicle 1 entered.
+Vehicle 2 entering entrance 0, space left 2.
+Vehicle 2 entered.
+Vehicle 2 left from 0 exit, space 2.
+Vehicle 3 entering entrance 0, space left 2.
+Vehicle 3 entered.
+Vehicle 4 entering entrance 0, space left 1.
+Vehicle 4 entered.
+Vehicle 3 left from 0 exit, space 1.
+Vehicle 5 entering entrance 0, space left 1.
+Vehicle 5 entered.
+Vehicle 6 entering entrance 0, space left 0.
+Vehicle 4 left from 0 exit, space 1.
+Vehicle 6 entered.
+Vehicle 7 entering entrance 0, space left 0.
+Vehicle 5 left from 0 exit, space 1.
+Vehicle 7 entered.
+zhh@mysvr:~/sysprogram/osprj$ ./parking 3 1 4
+Welcome to the parking lot in Vancouver city, there are 1 entries and 4 exits, 3 spaces to parking.
+mysem_open successful, capacity is 3.
+Fork entry process 0
+Fork exit process 0
+Fork exit process 1
+Entry 0 opened.
+Vehicle 0 entering entrance 0, space left 3.
+Vehicle 0 entered.
+Exit 0 opened.
+Vehicle 1 left from 0 exit, space 3.
+Fork exit process 2
+Exit 1 opened.
+Fork exit process 3
+Exit 2 opened.
+Exit 3 opened.
+Vehicle 1 entering entrance 0, space left 3.
+Vehicle 1 entered.

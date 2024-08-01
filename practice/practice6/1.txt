@@ -1,0 +1,40 @@
+Create a POSIX message queue-based client server application consisting of two programs, client.c and server.c. The client will send a request to the server containing four fields, namely, its process ID (i.e., PID), an integer array named values that can store 100 integers, an integer named count that specifies how many slots in that values array are valid (i.e., non-empty), and a string mode whose value can be "square" or "cube".
+For example, if count is 3, then values[0], values[1], and values[2] are valid whereas values[3], values[4], ..., values[99] are invalid (e.g., uninitialized).
+On receiving a request, the server will send a response to the client. The response will be made up of two parts, namely, an integer array named values that can store 100 integers, and an integer named count that specifies how many slots in the values array (of the response) are non-empty. The integers in the response's values array must be squares or cubes of the corresponding integers in the request's values array depending on whether the mode field in the request is "square" or "cube". On receiving a response, the client should print the contents of the values array of the response, one integer per line, and exit.
+The server must be multithreaded and must be able to handle multiple requests arriving at the same time. For every request received by the server, a new child thread must be created to compute and send the response. To compute the response's values array, a visitor (implemented using function pointer) must be called on the elements of the request's values array. If the mode is "square", then the visitor must be set to a function named "square", written by you, that computes the square of an integer. Similarly, if the mode is "cube" then the visitor must be set to a function named "cube", written by you, that computes the cube of an integer.
+The request message queue should be named /RequestQueue and should be created by the server when the server is launched, and removed by the server when the server exits. Requests must be read by the server in first in first out order. The server must exit upon receiving CTRL+C.
+Each client should create its own response message queue for receiving the response and should remove its response message queue before exiting. If the client's PID is n, then its response message queue should be named /ResponseQueue.n (e.g., if the client's PID is 7645 then its response message queue should be named /ResponseQueue.7645).
+COMPILING
+The two programs should be compiled as follows:
+cc server.c -o server -pthread
+cc client.c -o client
+RUNNING
+server
+The server should be run as follows:
+./server
+client
+The client should be run as follows:
+./client mode n1 n2 ...
+where mode is "square" or "cube", and n1, n2 ..., are integers that will placed in the values array of the request.
+For example, running
+./client square 2 4 3
+should produce the following output (printed by the client)
+4
+16
+9
+and running
+./client cube 4 2
+should produce the output (printed by the client)
+64
+8
+If the number of command line arguments is not sufficient (at least three arguments must be provided) or if the user runs "./client -h" or "./client --help", then the client should print
+Usage: ./client mode n1 n2 ...
+If mode is not "square" or "cube", then the client should print
+mode must be square or cube.
+If client fails to send a request to the server (e.g., because the server is not up and running), then it should print
+Client cannot reach server.
+WHAT TO SUBMIT
+Copy the client and server programs to files with .txt extension using the following commands
+cp client.c client.txt
+cp server.c server.txt
+Submit the files client.txt and server.txt

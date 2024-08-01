@@ -1,0 +1,11 @@
+['R-TS(B)', 'W-TS(B)', 'R-TS(A)', 'W-TS(A)']
+rts_B:0|wts_B:0
+0:rts_B:25|wts_B:0
+1:rts_B:26|wts_B:0
+3:rts_B:26|wts_B:26
+rts_A:0|wts_A:0
+4:rts_A:25|wts_A:0
+5:rts_A:26|wts_A:0
+8:rts_A:26|wts_A:26
+
+There is no conflict in ['T25', 'T26'].

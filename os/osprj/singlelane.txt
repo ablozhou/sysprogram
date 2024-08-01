@@ -1,0 +1,64 @@
+zhh@mysvr:~/sysprogram/osprj$ cc single_lane_bridge.c  -o bridge
+zhh@mysvr:~/sysprogram/osprj$ ./bridge
+
+
+zhh@mysvr:~/sysprogram/osprj$ cc single_lane_ent.c -o ent
+zhh@mysvr:~/sysprogram/osprj$ ./ent 1
+Entrance 1 vehicle: 1 join in single lane.
+Entrance 1 vehicle: 2 join in single lane.
+Entrance 1 vehicle: 3 join in single lane.
+Entrance 1 vehicle: 4 join in single lane.
+Entrance 1 vehicle: 5 join in single lane.
+Entrance 1 vehicle: 6 join in single lane.
+Entrance 1 vehicle: 7 join in single lane.
+Entrance 1 vehicle: 8 join in single lane.
+
+zhh@mysvr:~/sysprogram/osprj$ ./ent 2
+Entrance 2 vehicle: 1 join in single lane.
+Entrance 2 vehicle: 2 join in single lane.
+Entrance 2 vehicle: 3 join in single lane.
+Entrance 2 vehicle: 4 join in single lane.
+Entrance 2 vehicle: 5 join in single lane.
+Entrance 2 vehicle: 6 join in single lane.
+Entrance 2 vehicle: 7 join in single lane.
+Entrance 2 vehicle: 8 join in single lane.
+Entrance 2 vehicle: 9 join in single lane.
+
+zhh@mysvr:~/sysprogram/osprj$ ./bridge
+Opening single lane bridge, waiting vehicles.
+1: Entrance 1 vehicle: 1 entering bridge.
+1: left bridge.
+2: Entrance 1 vehicle: 2 entering bridge.
+2: left bridge.
+3: Entrance 1 vehicle: 3 entering bridge.
+3: left bridge.
+4: Entrance 1 vehicle: 4 entering bridge.
+4: left bridge.
+5: Entrance 1 vehicle: 5 entering bridge.
+5: left bridge.
+6: Entrance 1 vehicle: 6 entering bridge.
+6: left bridge.
+7: Entrance 1 vehicle: 7 entering bridge.
+7: left bridge.
+8: Entrance 1 vehicle: 8 entering bridge.
+8: left bridge.
+9: Entrance 2 vehicle: 1 entering bridge.
+9: left bridge.
+10: Entrance 2 vehicle: 2 entering bridge.
+10: left bridge.
+11: Entrance 2 vehicle: 3 entering bridge.
+11: left bridge.
+12: Entrance 2 vehicle: 4 entering bridge.
+12: left bridge.
+13: Entrance 2 vehicle: 5 entering bridge.
+13: left bridge.
+14: Entrance 2 vehicle: 6 entering bridge.
+14: left bridge.
+15: Entrance 2 vehicle: 7 entering bridge.
+15: left bridge.
+16: Entrance 2 vehicle: 8 entering bridge.
+16: left bridge.
+17: Entrance 2 vehicle: 9 entering bridge.
+17: left bridge.
+18: Entrance 2 vehicle: 10 entering bridge.
+18: left bridge.

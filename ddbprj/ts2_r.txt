@@ -1,0 +1,6 @@
+['R-TS(Q)', 'W-TS(Q)']
+rts_Q:0|wts_Q:0
+0:rts_Q:27|wts_Q:0
+1:rts_Q:27|wts_Q:28
+2:ts[T27]=27,rts_Q:27|wts_Q:28
+2:T27:write(Q) reject write T27.

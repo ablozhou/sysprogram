@@ -1,0 +1,12 @@
+T25| T26
+25|26
+read(B)|
+        | read(B)
+        | B=B-50
+        | write(B)
+read(A)|
+        | read(A)
+display(A + B)|
+        | A:=A+50
+        | write(A)
+        | display(A+B)
